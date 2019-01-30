@@ -74,7 +74,7 @@ export default class Node extends PIXI.Graphics {
         nodeBox.addChild(topHandle)
         nodeBox.lineStyle(2, App.current.theme.primaryColor, 1)
         nodeBox.beginFill(App.current.theme.secondaryColor, 1)
-        nodeBox.drawRect(0, 0, 105, 115)
+        nodeBox.drawRect(0, 0, 105, 200)
         nodeBox.endFill()
         nodeBox.lineStyle(2, 0xaaaaaa, 1)
         topHandle.interactive = true
@@ -119,7 +119,7 @@ export default class Node extends PIXI.Graphics {
             }
         }
         px = 24
-        py = 100
+        py = 185
         for (const pod of pods) {
             if (pod.namespace == 'kube-system') {
                 const podBox = Pod.getOrCreate(pod, this.cluster, this.tooltip)
